@@ -8,11 +8,18 @@ while guess != "q":
         break
     guess = (input("What number am I thinking of? "))
 
-    if guess == number:
+    if int(guess) == number:
         print("Congratulations! You guessed the right number.")
         break
+    elif guess == 'q':
     else:
         print(f"Sorry that was incorrect. Try again!")
+        if int(guess) > number:
+            print("The number is lower(hint)!")
+        else:
+            print("The number is higher(hint)!")
+
+
         count -=1
         print(f'You have {count} guesses left!')
 
